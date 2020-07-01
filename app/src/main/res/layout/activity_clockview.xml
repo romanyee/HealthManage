@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.dashboard.HeartBeatViewActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl_heartBeatAnayactivity_top"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@android:color/holo_blue_dark">
+
+        <ImageView
+            android:id="@+id/iv_heartBeatAnayactivity_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@android:color/holo_blue_dark"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:clickable="true"
+            android:src="@drawable/ic_chevron_left_black_24dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_heartBeatAnayactivity_anay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="心率分析"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/iv_heartBeatAnayactivity_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+    </RelativeLayout>
+
+    <com.example.demo2.ui.dashboard.HeartBeatView
+        android:id="@+id/clock_view"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:text_title_dial="心率"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clock_view"
+        >
+        <TextView
+            android:id="@+id/tv_titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/clock_view"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"
+            android:text="@string/ayaResult">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_heartResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/clock_view">
+        <TextView
+            android:id="@+id/tv_showHeartResult"
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:scrollbars="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_heartText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_heartResult">
+        <Button
+            android:id="@+id/tv_heartText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"
+            android:text="心率是什么？"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_moreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_heartText">
+        <Button
+            android:id="@+id/tv_moreText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"
+            android:text="正确看待窦性心动过缓?"
+            android:onClick="onClick2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_suggest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ll_heartText">
+        <Button
+            android:id="@+id/tv_suggest"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp"
+            android:text="建议：日常保健"
+            android:onClick="onClick3"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
